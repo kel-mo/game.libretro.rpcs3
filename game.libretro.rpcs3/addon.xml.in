@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="game.libretro.rpcs3"
+		name="Sony - PlayStation 3 (RPCS3)"
+		version="0.0.43.0"
+		provider-name="RPCS3 Team, WizzardSK">
+	<requires>
+		<import addon="game.libretro" version="1.0.0"/>
+		<import addon="game.controller.ps.dualshock" version="1.0.0"/>
+		<import addon="game.controller.ps.dualanalog" version="1.0.0"/>
+		<import addon="game.controller.ps.gamepad" version="1.0.0"/>
+	</requires>
+	<extension point="kodi.gameclient"
+			library_@PLATFORM@="@LIBRARY_FILENAME@">
+		<platforms>Sony - PlayStation 3</platforms>
+		<extensions>bin|self|elf|pkg|iso|sfo|sfb</extensions>
+		<supports_vfs>false</supports_vfs>
+		<supports_standalone>false</supports_standalone>
+		<supports_disc_control>false</supports_disc_control>
+		<libretro_core>rpcs3_libretro</libretro_core>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<license>GPLv2</license>
+		<platform>@PLATFORM@</platform>
+		<source>https://github.com/kodi-game/game.libretro.rpcs3</source>
+		<summary lang="en_GB">Sony - PlayStation 3 (RPCS3)</summary>
+		<description lang="en_GB">A port of the RPCS3 PlayStation 3 emulator to libretro. It runs the Cell processor with RPCS3&apos;s LLVM recompilers and renders with Vulkan, handing each frame to the frontend through memory, or with OpenGL into the frontend&apos;s own context. Needs the PS3 system software (PS3UPDAT.PUP) in the system directory. Save states are not supported.</description>
+	</extension>
+</addon>
